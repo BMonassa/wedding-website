@@ -21,7 +21,7 @@ export default function Checkout({ fullPrice }: CheckoutProps){
     }
 
     try {
-      const stripeResponse = await fetch('http://localhost:3333/create-checkout-session', {
+      const stripeResponse = await fetch('https://deploy-wedding.onrender.com/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
