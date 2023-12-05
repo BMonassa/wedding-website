@@ -26,10 +26,10 @@ export default function Gift({image, title, description, price, onClick, params,
     <Container>
       <Holder>
         <HolderText>
-          <TextCo color="black" size={22} title={title}/>
+          <TextCo color="black" size={18} fontweight={600} title={title}/>
           <Image src={image}/>
-          <TextCo size={18}title={description}/>
-          <TextCo size={22}title={`R$ ${price}`}/>
+          <TextCo size={16} fontweight={500} title={description}/>
+          <TextCo size={18}title={`R$ ${price}`}/>
 
           <Link to={`/Payment?paramsTitle=${title}&paramsPrice=${price}&paramsImage=${image}&paramsPay=${params}`}>
           <Button onClick={handleAddToCart}>

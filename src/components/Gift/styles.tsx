@@ -20,10 +20,10 @@ export const Holder = styled.div`
   margin-left: 20px;
   margin-right: 20px;
 
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
   width: 300px;
   height: 450px;
-} */
+}
 `;
 
 export const HolderText = styled.div`
@@ -39,7 +39,7 @@ export const Image = styled.img`
 `;
 
 export const H1 = styled.h1`
-  font-size: 20px;
+  font-size: 18px;
 `;
 
 export const P = styled.p`

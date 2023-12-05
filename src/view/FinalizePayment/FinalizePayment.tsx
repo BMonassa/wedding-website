@@ -96,7 +96,7 @@ export default function FinalizePayment(){
       <SummaryContainer>
         <SummaryHolder>
 
-        <TextCo size={16} fontweight={400} title='Digite uma mensagem para o casal'/>
+        <TextCo size={16} fontweight={400} title='Mande uma mensagem para o casal'/>
 
         <Form>
           {name === '' ? (
