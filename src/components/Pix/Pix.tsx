@@ -36,10 +36,10 @@ export default function Pix({ onClick }: PixProps) {
           </CloseButton>
         </CloseContainer>
 
-        <TextCo fontweight={500} title='Use o QRCode' />
+        <TextCo fontweight={500} size={20} title='Use o QRCode' />
         <PixQRCode />
-        <TextCo fontweight={500} size={20} title='ou chave pix' />
-        <TextCo fontweight={500} size={24} title='177.587.577-66' />
+        <TextCo fontweight={500} size={18} title='ou chave pix' />
+        <TextCo fontweight={500} size={20} title='177.587.577-66' />
       </Holder>
     </SlowAppearanceContainer>
   );

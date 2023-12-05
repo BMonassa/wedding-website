@@ -5,10 +5,11 @@ import TextCo from '../TextCo';
 
 interface CheckoutProps {
   fullPrice: number;
+  onClick?: () => void;
 }
 // const Checkout = ({ fullPrice }: CheckoutProps) =>
 
-export default function Checkout({ fullPrice }: CheckoutProps){
+export default function Checkout({ fullPrice, onClick }: CheckoutProps){
   const [loading, setLoading] = useState(false);
   const [stripe, setStripe] = useState<Stripe | null>(null);
 
@@ -55,7 +56,7 @@ export default function Checkout({ fullPrice }: CheckoutProps){
   }, []);
 
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Button onClick={handleCheckout} disabled={loading || !stripe}>
       <TextCo size={18} title={'Cartão de crédito'} />
 

@@ -1,13 +1,16 @@
-import { Link, useLocation } from "react-router-dom";
-import PixQRCode from "../../components/PixQRCode";
-import Margin from "../../components/Margin";
-import { Button, Container, Form, FormName, FormDescription,  Holder, SummaryContainer, SummaryHolder } from "./styles";
-import TextCo from "../../components/TextCo";
-import { useCart } from "../../Context/CartContext/CartContext";
-import Summary from "../../components/Summary";
-import { api } from "../../lib/axios";
 import { useEffect, useState } from "react";
+
+import { useLocation } from "react-router-dom";
+import { useCart } from "../../Context/CartContext/CartContext";
+
+import { api } from "../../lib/axios";
 import axios from "axios";
+
+import Margin from "../../components/Margin";
+import TextCo from "../../components/TextCo";
+import Summary from "../../components/Summary";
+import { Button, Container, Form, FormName, FormDescription,  Holder, SummaryContainer, SummaryHolder } from "./styles";
+
 
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
@@ -45,24 +48,24 @@ export default function FinalizePayment(){
   const paramsPrice = searchParams.get("paramsPrice");
   const paramsTitle = searchParams.get("paramsTitle");
 
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
   const [drawer, setDrawer] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await axios.get('http://localhost:3333/videos');
-        setData(result.data);
-        console.log('=========> FUNCIONOOOOU', result.data)
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const result = await axios.get('http://localhost:3333/videos');
+  //       setData(result.data);
+  //       console.log('=========> FUNCIONOOOOU', result.data)
+  //     } catch (error) {
+  //       console.error('Error fetching data: ', error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   const titleGift = cart.map((item) => item.title)
   const title = titleGift
@@ -93,22 +96,21 @@ export default function FinalizePayment(){
       <SummaryContainer>
         <SummaryHolder>
 
-        <TextCo size={22} title='REALIZAR PAGAMENTO'/>
+        <TextCo size={16} fontweight={400} title='Digite uma mensagem para o casal'/>
 
         <Form>
           {name === '' ? (
             <TextCo size={10} color="red" title='* Campo obrigatorio *' />
           ) : null}
           <FormName
-            type="text"
             placeholder="Digite seu nome"
             value={name}
-            onChange={(e) => setName(e.target.value)}/>
+            onChange={(e) => setName(e.target.value)}
+            user-scalable="no"/>
         </Form>
 
         <Form>
           <FormDescription
-            type="text"
             placeholder="Mensagens"
             value={message}
             onChange={(e) => setMessage(e.target.value)} />
@@ -127,24 +129,9 @@ export default function FinalizePayment(){
           </Button>
 
           <Elements stripe={stripePromise}>
-            <Checkout fullPrice={fullPriceStripe} />
+            <Checkout onClick={() => FinalizePayment()} fullPrice={fullPriceStripe} />
           </Elements>
-
       </Holder>
-
-
-
-
-      <Holder>
-        <Link to={`/Pix?paramsTitle=${paramsTitle}&paramsPrice=${paramsPrice}`}>
-          <Button onClick={() => FinalizePayment()}>
-            <TextCo size={18} title='Após efetuar o pagamento, clique aqui'/>
-          </Button>
-        </Link>
-      </Holder>
-
-
-
       </Container>
 
 

@@ -9,7 +9,7 @@ export default function PixQRCode() {
   return(
 
     <Container>
-      <QRCode value={valorPix} size={256} />
+      <QRCode value={valorPix} size={240} />
     </Container>
   )
 }

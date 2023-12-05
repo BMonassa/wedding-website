@@ -56,10 +56,10 @@ export default function Pay({ GiftTitle, GiftPrice, GiftImage }: PayProps) {
             <Holder>
               <ImageWrapper>
                 <Image src={product.image} />
-                <TextCo size={16} title={product.title}  />
+                <TextCo size={16} title={product.title} />
               </ImageWrapper>
 
-              <ItemEdito add={() => {addToCart(product)}} remove={() => {removeFromCart(product)}} count={product.quantity}/>
+              <ItemEdito add={() => { addToCart(product) }} remove={() => { removeFromCart(product) }} count={product.quantity} />
 
             </Holder>
 
@@ -80,21 +80,22 @@ export default function Pay({ GiftTitle, GiftPrice, GiftImage }: PayProps) {
     </Container>
   );
 
-  function ItemEdito({add, remove, count} : ItemEditorProps){
-    return(
+  function ItemEdito({ add, remove, count }: ItemEditorProps) {
+    return (
       <ContainerItem>
-      <ItemHolder onClick={add}>
-        <TextCo size={20} title='+'/>
-      </ItemHolder>
+        <ItemHolder onClick={remove}>
+          <TextCo size={20} title='-' />
+        </ItemHolder>
 
-      <ItemHolder>
-        <TextCo size={20} title={count}/>
-      </ItemHolder>
 
-      <ItemHolder onClick={remove}>
-      <TextCo size={20} title='-'/>
-      </ItemHolder>
-    </ContainerItem>
+        <ItemHolder>
+          <TextCo size={20} title={count} />
+        </ItemHolder>
+
+        <ItemHolder onClick={add}>
+          <TextCo size={20} title='+' />
+        </ItemHolder>
+      </ContainerItem>
     )
   }
 }

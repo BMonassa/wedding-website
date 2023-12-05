@@ -16,15 +16,16 @@ export const Container = styled.div`
 
 export const Holder = styled.div`
   position: absolute;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   justify-content: center;
   align-items: center;
   background-color: #f8fbfb;
   border: 2px solid  #55a2d1;
   border-radius: 20px;
+  padding: 20px;
 `;
-
 
 export const CloseContainer = styled.div`
   display: flex;

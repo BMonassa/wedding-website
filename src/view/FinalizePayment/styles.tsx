@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   margin-top: 140px;
@@ -38,12 +37,12 @@ export const FormName = styled.input`
   height: 32px;
 `;
 
-export const FormDescription = styled.input`
+export const FormDescription = styled.textarea`
   border-radius: 4px;
   border-width: 0;
   padding-left: 1px;
   width: 250px;
-  height: 80px;
+  height: 50px;
   margin-top: 8px;
 `;
 
