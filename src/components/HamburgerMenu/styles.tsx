@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HamburgerMenuContainer = styled.div`
+export const HamburgerMenuContainer = styled.div`
   display: none;
 
   @media (max-width: 768px) {
@@ -11,7 +11,7 @@ const HamburgerMenuContainer = styled.div`
   }
 `;
 
-const HamburgerIcon = styled.div`
+export const HamburgerIcon = styled.div`
   width: 30px;
   height: 20px;
   display: flex;
@@ -20,7 +20,7 @@ const HamburgerIcon = styled.div`
   cursor: pointer;
 `;
 
-const HamburgerLine = styled.div`
+export const HamburgerLine = styled.div`
   width: 100%;
   height: 2px;
   background-color: #000;
@@ -43,7 +43,7 @@ const HamburgerLine = styled.div`
   }
 `;
 
-const MenuOptions = styled.div`
+export const MenuOptions = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -55,9 +55,8 @@ const MenuOptions = styled.div`
   border-radius: 8px;
 `;
 
-const MenuItem = styled.p`
-  margin: 10px 0;
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 `;
-
-export { HamburgerMenuContainer, HamburgerIcon, HamburgerLine, MenuOptions, MenuItem };
