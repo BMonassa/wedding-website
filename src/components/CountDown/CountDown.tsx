@@ -13,28 +13,28 @@ export default function CountDown() {
           <TextDayNumber>
             <TextCo  title={day} />
           </TextDayNumber>
-          <TextCo size={16} title='Dias'></TextCo>
+          <TextCo size={16} title='Dias' fontweight={600}/>
         </ContainerText>
 
         <ContainerText>
           <TextDayNumber>
             <TextCo  title={hour} />
           </TextDayNumber>
-          <TextCo size={16} title='Horas'></TextCo>
+          <TextCo size={16} title='Horas' fontweight={600}/>
         </ContainerText>
 
         <ContainerText>
           <TextDayNumber>
             <TextCo  title={minute} />
           </TextDayNumber>
-          <TextCo size={16} title='Minutos'></TextCo>
+          <TextCo size={16} title='Minutos' fontweight={600}/>
         </ContainerText>
 
         <ContainerText>
           <TextDayNumber>
             <TextCo  title={second} />
           </TextDayNumber>
-          <TextCo size={16} title='Segundos'></TextCo>
+          <TextCo size={16} title='Segundos' fontweight={600}/>
         </ContainerText>
 
       </Holder>

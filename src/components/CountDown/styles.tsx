@@ -30,8 +30,8 @@ export const TextDayNumber = styled.div`
 
 
   @media (max-width: 768px) {
-  width: 25px;
-  height: 50px;
+  width: 15px;
+  height: 45px;
   font-size: 10px;
   }
 `;
