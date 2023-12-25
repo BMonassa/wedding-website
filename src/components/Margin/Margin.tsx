@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Brasao, TextInsideMargin, TopMargin } from './styles';
-import TextCo from '../TextCo';
-import brasaoImage from '../../assets/image/logo-2-2.png';
+import brasaoImage from '../../assets/image/logo.png';
 import Buttons from './Buttons';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 

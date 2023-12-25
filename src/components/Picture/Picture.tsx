@@ -1,14 +1,14 @@
 import { Container, ContainerImg, ImgWrapper } from "./styles";
 
-import Noivado from '../../assets/image/4x4/Noivado.jpg'
-import Chalezinho from '../../assets/image/4x4/Chalezinho.jpg'
-import Bonito from '../../assets/image/4x4/Bonito.jpg'
-import Texas from '../../assets/image/4x4/Texas.jpg'
-import Noronha from '../../assets/image/4x4/Noronha.jpg'
-import Piratininga from '../../assets/image/4x4/Piratininga.jpg'
-import Vidigal from '../../assets/image/4x4/Vidigal.jpg'
-import Chalezinho2 from '../../assets/image/4x4/Chalezinho2.jpg'
-import Festa from '../../assets/image/4x4/Festa.jpg'
+import Noivado from '../../assets/image/imgHome/Noivado.jpg'
+import Chalezinho from '../../assets/image/imgHome/Chalezinho.jpg'
+import Bonito from '../../assets/image/imgHome/Bonito.jpg'
+import Texas from '../../assets/image/imgHome/Texas.jpg'
+import Noronha from '../../assets/image/imgHome/Noronha.jpg'
+import Piratininga from '../../assets/image/imgHome/Piratininga.jpg'
+import Vidigal from '../../assets/image/imgHome/Vidigal.jpg'
+import Chalezinho2 from '../../assets/image/imgHome/Chalezinho2.jpg'
+import Festa from '../../assets/image/imgHome/Festa.jpg'
 
 import TextCo from "../TextCo";
 

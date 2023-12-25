@@ -12,8 +12,8 @@ import {
   ContainerText,
 } from './styles';
 
-import logoImage from '../../assets/image/NoronhaOnda2.png';
-import brasaoImage from '../../assets/image/logo-2-2.png';
+import logoImage from '../../assets/image/NoronhaHeader.png';
+import brasaoImage from '../../assets/image/logo.png';
 import TextCo from '../TextCo';
 
 export default function Header() {
