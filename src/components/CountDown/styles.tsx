@@ -36,15 +36,6 @@ export const TextDayNumber = styled.div`
   }
 `;
 
-export const TextDay = styled.h1`
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  justify-content: center;
-
-`;
-
 export const ContainerText = styled.div`
   flex-direction: row;
 `;

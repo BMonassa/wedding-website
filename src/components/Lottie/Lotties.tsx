@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import animationData from '../../assets/Lottie/ampulheta.json';
+import animationData from '../../assets/Lottie/hourglass.json';
 import { Container } from './styles';
 
 export default function Lotties(){

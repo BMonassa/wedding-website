@@ -7,9 +7,8 @@ interface CheckoutProps {
   fullPrice: number;
   onClick?: () => void;
 }
-// const Checkout = ({ fullPrice }: CheckoutProps) =>
 
-export default function Checkout({ fullPrice, onClick }: CheckoutProps){
+export default function Checkout({ fullPrice, onClick }: CheckoutProps) {
   const [loading, setLoading] = useState(false);
   const [stripe, setStripe] = useState<Stripe | null>(null);
 
@@ -17,7 +16,7 @@ export default function Checkout({ fullPrice, onClick }: CheckoutProps){
     setLoading(true);
 
     if (!stripe) {
-      // Stripe não está pronto ainda.
+      // Stripe isn't ready yet.
       return;
     }
 
@@ -46,7 +45,7 @@ export default function Checkout({ fullPrice, onClick }: CheckoutProps){
     }
   };
 
-  // Carregar o Stripe assim que o componente for montado
+  // Load Stripe once the component is mounted
   React.useEffect(() => {
     const loadStripeAsync = async () => {
       const stripeInstance = await loadStripe('pk_live_51NoEI2EyXuhlatBRqLzEz64elDZUMqpLjxrfgLV83vkCENqmVjCRGuoWVRkbcoYFOFxLPNeG6IWpPP1haVaj26hd00Dm2ZbXzt');
@@ -58,7 +57,7 @@ export default function Checkout({ fullPrice, onClick }: CheckoutProps){
   return (
     <Container onClick={onClick}>
       <Button onClick={handleCheckout} disabled={loading || !stripe}>
-      <TextCo size={18} title={'Cartão de crédito'} />
+        <TextCo size={18} title={'Cartão de crédito'} />
 
       </Button>
     </Container>

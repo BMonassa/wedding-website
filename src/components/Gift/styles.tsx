@@ -11,7 +11,6 @@ export const Holder = styled.div`
   align-items: center;
   text-align: center;
   border-radius: 20px;
-  /* background-color: #e2f1f7; */
   background-color: #caeaf6;
   width: 350px;
   height: 500px;
@@ -42,9 +41,6 @@ export const H1 = styled.h1`
   font-size: 18px;
 `;
 
-export const P = styled.p`
-`;
-
 export const Button = styled.button`
   width: 150px;
   height: 50px;
@@ -65,5 +61,4 @@ export const Button = styled.button`
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-
 `;

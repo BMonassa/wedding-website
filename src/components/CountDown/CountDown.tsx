@@ -1,6 +1,6 @@
 import useCountdown from "../../hooks/useCountdown";
 import TextCo from "../TextCo";
-import { Container, Holder, TextDayNumber, TextDay, ContainerText } from "./styles";
+import { Container, Holder, TextDayNumber, ContainerText } from "./styles";
 
 export default function CountDown() {
   const [day, hour, minute, second] = useCountdown('May 18, 2024 00:00:00');
@@ -11,30 +11,30 @@ export default function CountDown() {
 
         <ContainerText>
           <TextDayNumber>
-            <TextCo  title={day} />
+            <TextCo title={day} />
           </TextDayNumber>
-          <TextCo size={16} title='Dias' fontweight={600}/>
+          <TextCo size={16} title='Dias' fontweight={600} />
         </ContainerText>
 
         <ContainerText>
           <TextDayNumber>
-            <TextCo  title={hour} />
+            <TextCo title={hour} />
           </TextDayNumber>
-          <TextCo size={16} title='Horas' fontweight={600}/>
+          <TextCo size={16} title='Horas' fontweight={600} />
         </ContainerText>
 
         <ContainerText>
           <TextDayNumber>
-            <TextCo  title={minute} />
+            <TextCo title={minute} />
           </TextDayNumber>
-          <TextCo size={16} title='Minutos' fontweight={600}/>
+          <TextCo size={16} title='Minutos' fontweight={600} />
         </ContainerText>
 
         <ContainerText>
           <TextDayNumber>
-            <TextCo  title={second} />
+            <TextCo title={second} />
           </TextDayNumber>
-          <TextCo size={16} title='Segundos' fontweight={600}/>
+          <TextCo size={16} title='Segundos' fontweight={600} />
         </ContainerText>
 
       </Holder>

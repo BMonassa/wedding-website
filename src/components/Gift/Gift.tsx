@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import TextCo from "../TextCo";
-import { Container, H1, Holder, HolderText, Image, P, Button } from "./styles";
+import { Container, H1, Holder, HolderText, Image, Button } from "./styles";
 import { useCart } from '../../Context/CartContext/CartContext';
 
 interface GiftProps {
@@ -8,12 +8,10 @@ interface GiftProps {
   title: string;
   description: string;
   price: number;
-  onClick?: () => void;
   params?: string | string[]
-  paramsSec?: string;
 }
 
-export default function Gift({image, title, description, price, onClick, params, paramsSec}: GiftProps){
+export default function Gift({ image, title, description, price, params }: GiftProps) {
 
   const { addToCart } = useCart();
 
@@ -22,21 +20,21 @@ export default function Gift({image, title, description, price, onClick, params,
   };
 
   console.log(addToCart)
-  return(
+  return (
     <Container>
       <Holder>
         <HolderText>
-          <TextCo color="black" size={18} fontweight={600} title={title}/>
-          <Image src={image}/>
-          <TextCo size={16} fontweight={500} title={description}/>
-          <TextCo size={18}title={`R$ ${price}`}/>
+          <TextCo color="black" size={18} fontweight={600} title={title} />
+          <Image src={image} />
+          <TextCo size={16} fontweight={500} title={description} />
+          <TextCo size={18} title={`R$ ${price}`} />
 
           <Link to={`/Payment?paramsTitle=${title}&paramsPrice=${price}&paramsImage=${image}&paramsPay=${params}`}>
-          <Button onClick={handleAddToCart}>
-            <H1>Presentear</H1>
-          </Button>
+            <Button onClick={handleAddToCart}>
+              <H1>Presentear</H1>
+            </Button>
           </Link>
-          </HolderText>
+        </HolderText>
       </Holder>
     </Container>
   )
