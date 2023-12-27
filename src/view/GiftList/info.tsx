@@ -8,6 +8,12 @@ import idosos from '../../assets/image/Gift/idosos.jpg';
 import maquiagem from '../../assets/image/Gift/maquiagem.jpg';
 import psicologo from '../../assets/image/Gift/psicologo.jpg'
 import ressaca from '../../assets/image/Gift/ressaca.jpeg';
+import kitChurrasco from '../../assets/image/Gift/kitChurrasco.jpeg'
+import cobertor from '../../assets/image/Gift/cobertor.jpeg'
+import netflix from '../../assets/image/Gift/netflix.png'
+import miojo from '../../assets/image/Gift/miojo.jpeg'
+import pegarBuque from '../../assets/image/Gift/pegarBuque.jpeg'
+import cartoes from '../../assets/image/Gift/cartoes.jpeg'
 
 export default {
   aluguel: {
@@ -64,5 +70,40 @@ export default {
     description: 'Para o dia do casamento',
     price: 200
   },
+  kitChurrasco: {
+    image: kitChurrasco,
+    title: 'Kit Churrasco',
+    description: 'Para deixar a noiva alimentada',
+    price: 200
+  },
+  cobertor: {
+    image: cobertor,
+    title: 'Cobertor',
+    description: 'Para quando a noiva estiver coberta de razão',
+    price: 200
+  },
+  netflix: {
+    image: netflix,
+    title: 'Netflix',
+    description: 'Para os noivos assistir filme',
+    price: 200
+  },
+  miojo: {
+    image: miojo,
+    title: 'Miojo superfaturado',
+    description: 'Para deixar a noiva alimentada',
+    price: 200
+  },
+  pegarBuque: {
+    image: pegarBuque,
+    title: 'Aumente 30% de chance para pegar o buquê',
+    description: 'Para desencalhar',
+    price: 200
+  },
+  cartoes: {
+    image: cartoes,
+    title: 'Ajude a pagar o cartão',
+    description: 'Sério, da até medo de olhar a fatura',
+    price: 200
+  },
 };
-
