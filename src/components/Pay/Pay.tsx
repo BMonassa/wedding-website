@@ -56,7 +56,7 @@ export default function Pay({ GiftTitle, GiftPrice, GiftImage }: PayProps) {
             <Holder>
               <ImageWrapper>
                 <Image src={product.image} />
-                <TextCo size={16} title={product.title} />
+                <TextCo size={16} fontweight={500} title={product.title} />
               </ImageWrapper>
 
               <ItemEdito add={() => { addToCart(product) }} remove={() => { removeFromCart(product) }} count={product.quantity} />

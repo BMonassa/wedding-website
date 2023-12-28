@@ -24,7 +24,7 @@ export default function Gift({ image, title, description, price, params }: GiftP
     <Container>
       <Holder>
         <HolderText>
-          <TextCo color="black" size={18} fontweight={600} title={title} />
+          <TextCo color="black" size={18} fontweight={500} title={title} />
           <Image src={image} />
           <TextCo size={16} fontweight={500} title={description} />
           <TextCo size={18} title={`R$ ${price}`} />

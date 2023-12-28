@@ -60,7 +60,7 @@ export default function Payment() {
 
         <Holder>
           <Link to={'/GiftList'}>
-            <Button onClick={() => console.log('teste')}>
+            <Button>
               <TextCo size={18} title="<- Voltar para a lista de presente" />
             </Button>
           </Link>
@@ -79,12 +79,6 @@ export default function Payment() {
               <TextCo size={18} title={'Finalizar compra'} />
             </Button>
           </Link>
-
-          {/* <PaymentHolder>
-            <Elements stripe={stripePromise}>
-              <Checkout fullPrice={fullPriceStripe} />
-            </Elements>
-          </PaymentHolder> */}
         </Holder>
 
 

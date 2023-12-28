@@ -9,7 +9,7 @@ import axios from "axios";
 import Margin from "../../components/Margin";
 import TextCo from "../../components/TextCo";
 import Summary from "../../components/Summary";
-import { Button, Container, Form, FormName, FormDescription,  Holder, SummaryContainer, SummaryHolder } from "./styles";
+import { Button, Container, Form, FormName, FormDescription, Holder, SummaryContainer, SummaryHolder } from "./styles";
 
 
 import { loadStripe } from '@stripe/stripe-js';
@@ -20,7 +20,7 @@ import Pix from "../../components/Pix";
 
 const stripePromise = loadStripe('pk_live_51NoEI2EyXuhlatBRqLzEz64elDZUMqpLjxrfgLV83vkCENqmVjCRGuoWVRkbcoYFOFxLPNeG6IWpPP1haVaj26hd00Dm2ZbXzt');
 
-export default function FinalizePayment(){
+export default function FinalizePayment() {
   const { cart } = useCart();
 
   const location = useLocation();
@@ -28,7 +28,7 @@ export default function FinalizePayment(){
   const calcularTotal = (cart: any[]) => {
     try {
       return cart.reduce(
-        (total: number, {price, quantity}: any) =>
+        (total: number, { price, quantity }: any) =>
           total + parseFloat(price) * quantity,
         0,
       );
@@ -45,94 +45,84 @@ export default function FinalizePayment(){
 
   const searchParams = new URLSearchParams(location.search);
   const paramsPriceFull = searchParams.get("paramsPriceFull");
-  const paramsPrice = searchParams.get("paramsPrice");
-  const paramsTitle = searchParams.get("paramsTitle");
 
-  // const [data, setData] = useState(null);
   const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [description, setDescription] = useState('');
+  const [full, setFull] = useState(true);
 
   const [drawer, setDrawer] = useState(false);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const result = await axios.get('http://localhost:3333/videos');
-  //       setData(result.data);
-  //       console.log('=========> FUNCIONOOOOU', result.data)
-  //     } catch (error) {
-  //       console.error('Error fetching data: ', error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
 
   const titleGift = cart.map((item) => item.title)
   const title = titleGift
   const price = priceFull
 
-  async function FinalizePayment(){
-    try{
-      const response = await api.post('/videos', {title, name, price});
-      console.log(response.data, 'foooi postadoo')
+  async function FinalizePayment() {
+    if (name === '') {
+      setFull(false)
+    } else {
+      try {
+        const response = await api.post('/videos', { title, name, description, price });
+        console.log(response.data, 'foooi postadoo')
 
-    } catch (error) {
-      console.log(error, 'não foi')
+      } catch (error) {
+        console.log(error, 'não foi')
+      }
     }
   }
 
-  return(
-      <Container>
-      <Margin/>
+  return (
+    <Container>
+      <Margin />
 
-    {drawer === true ?(
-      <Pix onClick={() => {setDrawer(false)}}/>
-    ): null}
+      {drawer === true ? (
+        <Pix onClick={() => { setDrawer(false) }} />
+      ) : null}
 
-      <TextCo size={24}title='FINALIZE A SUA COMPRA'/>
+      <TextCo size={22} fontweight={600} title='FINALIZE A SUA COMPRA' />
 
-      <Summary subTotal={paramsPriceFull}/>
+      <Summary subTotal={paramsPriceFull} />
 
       <SummaryContainer>
         <SummaryHolder>
 
-        <TextCo size={16} fontweight={400} title='Mande uma mensagem para o casal'/>
+          <TextCo size={16} fontweight={400} title='Mande uma mensagem para o casal' />
 
-        <Form>
-          {name === '' ? (
-            <TextCo size={10} color="red" title='* Campo obrigatorio *' />
-          ) : null}
-          <FormName
-            placeholder="Digite seu nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            user-scalable="no"/>
-        </Form>
+          <Form>
+            {name === '' ? (
+              <TextCo size={12} color="red" title='* Campo obrigatorio *' />
+            ) : null}
+            <FormName
+              placeholder="Digite seu nome"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              user-scalable="no" />
+          </Form>
 
-        <Form>
-          <FormDescription
-            placeholder="Mensagens"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)} />
-        </Form>
+          <Form>
+            <FormDescription
+              placeholder="Mensagens"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)} />
+          </Form>
 
         </SummaryHolder>
       </SummaryContainer>
 
-      {/* <YourComponent/> */}
-
-      {/* <PixQRCode keyPix="d86c3b25-3124-4ce4-a20f-9e4e269af759" value='100' title='carro'/> */}
-
-      <Holder>
+      {name !== '' ? (
+        <Holder>
           <Button onClick={() => setDrawer(true)}>
-            <TextCo size={18} title='Pix'/>
+            <TextCo size={18} title='Pix' />
           </Button>
 
           <Elements stripe={stripePromise}>
             <Checkout onClick={() => FinalizePayment()} fullPrice={fullPriceStripe} />
           </Elements>
-      </Holder>
-      </Container>
+        </Holder>
+      ) : null
+      }
+
+
+    </Container>
 
 
   )
