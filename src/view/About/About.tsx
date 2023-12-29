@@ -24,32 +24,30 @@ export default function About() {
       <Margin />
 
       <Holder>
-        <TextCo title='SOBRE NÓS' />
-
         <ContainerText>
-          <TextCo size={20} color="#000000" fontweight={600} title='O COMEÇO DE TUDO' />
+          <TextCo size={20} color="#000000" fontweight={500} title='O COMEÇO DE TUDO' />
 
           <TextCo
-          size={18}
-          color="#000000"
-          fontweight={500}
-          title='Tudo começou como um conto de fadas inesperado, e agora estamos prestes a viver o clímax desse romance: o nosso casamento! Navegue pelo nosso site e mergulhe na jornada que nos trouxe até este momento mágico. O coração aperta com a proximidade do grande dia, e cada lembrança é como um pedacinho do nosso conto de amor que queremos compartilhar com você. Descubra os capítulos que nos uniram e celebraremos juntos o início do nosso conto de casamento'
-        />
+            size={18}
+            color="#000000"
+            fontweight={500}
+            title='Tudo começou como um conto de fadas inesperado, e agora estamos prestes a viver o clímax desse romance: o nosso casamento! Navegue pelo nosso site e mergulhe na jornada que nos trouxe até este momento mágico. O coração aperta com a proximidade do grande dia, e cada lembrança é como um pedacinho do nosso conto de amor que queremos compartilhar com você. Descubra os capítulos que nos uniram e celebraremos juntos o início do nosso conto de casamento'
+          />
         </ContainerText>
 
         <ContainerImg>
-            <Image src={casamentoPrima} />
-            <Image src={flamengo} />
-            <Image src={trilha} />
-            <Image src={icarai} />
-            <Image src={thor} />
-            <Image src={noi} />
-            <Image src={noivado} />
-            <Image src={noronha} />
-            <Image src={praia} />
-            <Image src={restaurantesp} />
-            <Image src={sp} />
-            <Image src={texas} />
+          <Image src={casamentoPrima} />
+          <Image src={flamengo} />
+          <Image src={trilha} />
+          <Image src={icarai} />
+          <Image src={thor} />
+          <Image src={noi} />
+          <Image src={noivado} />
+          <Image src={noronha} />
+          <Image src={praia} />
+          <Image src={restaurantesp} />
+          <Image src={sp} />
+          <Image src={texas} />
         </ContainerImg>
       </Holder>
     </Container>

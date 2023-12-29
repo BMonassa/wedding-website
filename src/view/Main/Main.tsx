@@ -32,7 +32,7 @@ export default function Main() {
           size={16}
           color="#4c4c4f"
           fontweight={400}
-          title="Este site foi criado para nos aproximarmos ainda mais no caminho rumo ao nosso grande dia. Aqui, vocês descobrirão todos os detalhes que tornarão esse momento inesquecível: desde a data e o local do casamento até nossa seleção de presentes que nos deixará radiantes. E não poderiam faltar as fotos que capturam nossa jornada juntos. Agradecemos por fazerem parte dessa etapa única em nossas vidas!"
+          title="Este site foi criado para nos aproximarmos ainda mais no caminho rumo ao nosso grande dia. Aqui, vocês descobrirão todos os detalhes que tornarão esse momento inesquecível: desde a data e o local do casamento até nossa seleção de presentes que nos deixará radiantes e não poderiam faltar as fotos que capturam nossa jornada juntos. Agradecemos por fazerem parte dessa etapa única em nossas vidas!"
         />
       </ContainerText>
 
