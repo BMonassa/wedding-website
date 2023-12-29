@@ -9,11 +9,21 @@ export const Container = styled.div`
 `;
 
 export const Holder = styled.div`
+  margin-bottom: 200px;
+`;
+
+export const ContainerImg = styled.div`
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const Image = styled.img`
-  width: 350px;
-  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  margin-left: 32px;
+  margin-top: 32px;
 `;
 
 export const ContainerText = styled.div`

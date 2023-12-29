@@ -89,7 +89,7 @@ export default function FinalizePayment() {
 
           <Form>
             {name === '' ? (
-              <TextCo size={12} color="red" title='* Campo obrigatorio *' />
+              <TextCo size={12} color="red" title='* Campo obrigatório *' />
             ) : null}
             <FormName
               placeholder="Digite seu nome"

@@ -10,8 +10,6 @@ import Vidigal from '../../assets/image/imgHome/Vidigal.jpg'
 import Chalezinho2 from '../../assets/image/imgHome/Chalezinho2.jpg'
 import Festa from '../../assets/image/imgHome/Festa.jpg'
 
-import TextCo from "../TextCo";
-
 export default function Picture(){
   return(
     <Container>
