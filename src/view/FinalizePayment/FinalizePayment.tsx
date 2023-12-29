@@ -120,8 +120,6 @@ export default function FinalizePayment() {
         </Holder>
       ) : null
       }
-
-
     </Container>
 
 
