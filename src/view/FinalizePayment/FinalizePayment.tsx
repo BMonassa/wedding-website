@@ -70,6 +70,11 @@ export default function FinalizePayment() {
     }
   }
 
+  function finalizePaymentePix(){
+    setDrawer(true)
+    FinalizePayment()
+  }
+
   return (
     <Container>
       <Margin />
@@ -110,7 +115,7 @@ export default function FinalizePayment() {
 
       {name !== '' ? (
         <Holder>
-          <Button onClick={() => setDrawer(true)}>
+          <Button onClick={() => finalizePaymentePix()}>
             <TextCo size={18} title='Pix' />
           </Button>
 
