@@ -88,7 +88,7 @@ export default {
   netflix: {
     image: netflix,
     title: 'Netflix',
-    description: 'Para os noivos assistir filme',
+    description: 'Para os noivos assitirem filme',
     price: 149.99
   },
   miojo: {
